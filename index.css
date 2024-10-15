@@ -13,7 +13,7 @@ body{
     height: 100vh;
     overflow-x: hidden;
     background-color: rgb(0, 0, 0);
-    color: rgb(9, 90, 83);
+    color: rgb(0, 0, 0);
 }
 
 header{
@@ -37,7 +37,7 @@ header{
 
 nav a{
     font-size: 4 rem;
-    color: rgb(168, 16, 16);
+    color: rgb(235, 235, 235);
     margin-left: 4rem;
     font-weight: 500;
     transition: 0.3s ease;
@@ -79,14 +79,14 @@ nav a.active{
     nav a.active{
         padding: 1rem;
         border-radius: 0.5rem;
-        border-bottom: 0.5rem solid #b74b4b;
+        border-bottom: 0.5rem solid #000000;
     }
 }
 
 
 .logo{
     font-size: 2rem;
-    color: #ff1f01d3;
+    color: #e4e4e4d3;
     font-weight: 800;
     cursor: pointer;
     transition: 0.5s ease;
@@ -169,7 +169,7 @@ nav a.active{
 
 
 .color-01{
-    background:#bb094a
+    background:#000000
 }
 
 /*==section 02,03,04,05==*/
@@ -189,7 +189,8 @@ nav a.active{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 1.7em;
-    column-gap: 1.5em;
+    column-gap: 15em;
+    
 }
 
 .cards .text-card{
@@ -213,6 +214,7 @@ nav a.active{
     font-size: 1em;
     font-weight: 300;
 }
+
 
 @media screen and (max-width: 1010px){
     .home h1{
@@ -272,8 +274,89 @@ nav a.active{
     opacity: 1; 
 }
 
+.color-02{
+    background:#c48c8c
+}
+
+.main-container .cards2{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 1.7em;
+    column-gap: 15em;
+    
+}
+
+.cards .text-card{
+    width: 300px;
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px 15px;
+    border-radius: 5px;
+}
+
+.text-card h3{
+    font-size: 1.7em;
+    font-weight: 600px;
+    margin-bottom: 20px;
+}
+
+.text-card p{
+    font-size: 1em;
+    font-weight: 300;
+}
+
+
+@media screen and (max-width: 1010px){
+    .home h1{
+        font-size: 3.8em;
+    }
+
+    }
+
+@media screen and (max-width: 825px){
+    .home h1{
+        font-size: 3em;
+    }    
 
 
 
-  
- 
+  }
+
+
+@media screen and (max-width: 425px){
+    section{
+        padding: 0 20px;
+}
+.home h1{
+    font-size: 2.5em;
+}
+
+
+
+
+.main-container h2{
+    font-size: 2em;
+}
+
+.cards .text-card{
+    width: 100%;
+    height: fit-content;
+    padding: 50px 15px;
+}
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s ease;
+    transition-property: transform, opacity;
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1; 
+}
